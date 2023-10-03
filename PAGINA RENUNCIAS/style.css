@@ -1,0 +1,45 @@
+#enc {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px; /* Añade un espacio interior para mejorar la apariencia */
+}
+
+#enc:hover {
+    color: #FF5733; /* Cambia el color al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+
+
+body {
+    background: linear-gradient(135deg, white, #192a56); /* Degradado de gris oscuro a negro más claro */
+}
+
+
+
+
+
+
+
+
+/* Estilo para el encabezado */
+.encabezado {
+    background-color: #898686;
+    color: #17184B;
+    padding: 50px;
+    text-align: center;
+    position: relative; /* Establece la posición relativa para que los elementos absolutos se basen en este contenedor */
+    top: -698px;
+
+
+
+}
+
+/* Estilo para la imagen */
+.imagen-encima {
+    position: absolute; /* Establece la posición absoluta para que la imagen no afecte al flujo del contenido */
+    top: 60px; /* Ajusta la distancia desde la parte superior del encabezado */
+    right: 30px; /* Ajusta la distancia desde la derecha del encabezado */
+    width: 200px; /* Ancho deseado para la imagen */
+    height: 150px; /* Alto deseado para la imagen */
+    z-index: 1; /* Ajusta la propiedad z-index para asegurarte de que la imagen esté por encima del encabezado */
+}

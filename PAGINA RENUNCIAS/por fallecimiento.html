@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Mi Página Web</title>
+    <style type="text/css">
+    /* Estilos CSS para ocultar los detalles por defecto */
+    /* Practicamente es la animación para que se despliegue el contenido de la lista */
+    .requisito-detalles {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1.3s ease; /* Aumenta la duración de la animación a 1.3 segundos */
+    }
+
+    /* Resto de tu CSS ... */
+
+    /* Estilos CSS para el título de la lista */
+    .requisito-titulo {
+        font-size: 18px; /* Tamaño de la fuente del título */
+    }
+
+   
+
+
+        .encabezado {
+    animation: subtleShift 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes subtleShift {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+
+
+
+
+  body {
+    background-image: url('fondol2.jpg'); /* Reemplaza 'patron.png' con la ubicación de tu patrón */
+    background-repeat: repeat; /* Repite el patrón en todas las direcciones */
+}
+
+
+</style>
+
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="texto_encabezado">Información por fallecimiento</h1>
+        <p class="texto-resaltado">Bienvenid@, aquí puede consultar la información que necesite.</p>
+    </header>
+
+    <ul id="lista-requisitos">
+        <li>
+            <span class="requisito-titulo">REQUISITO 1</span>
+            <div class="requisito-detalles">
+                <br>
+                <p class="requisito-contenido">3 certificados de defunción</p>
+            </div>
+        </li>
+        <li>
+            <span class="requisito-titulo">REQUISITO 3</span>
+            <div class="requisito-detalles">
+                <br>
+                <p class="requisito-contenido">3 DPI</p>
+            </div>
+        </li>
+        <li>
+            <span class="requisito-titulo">REQUISITO 3</span>
+            <div class="requisito-detalles">
+                <br>
+                <p class="requisito-contenido">3 vaucher</p>
+            </div>
+        </li>
+        
+        <!-- Agrega más requisitos aquí -->
+    </ul>
+
+    <!-- Botón al final de la página con estilos de tamaño -->
+    <a href="PDF jubilacion.html">
+<button id="miBoton" style="display: block; margin: 20px auto; font-size: 18px; padding: 10px 20px;"><a href="Renuncia Pacto Colectivo.pdf" target="_blank">Documento a descargar</a></button>
+
+<!-- Nuevo botón al final de la página con margen izquierdo -->
+<a href="index.html">
+<button id="miBotonNuevo" style="display: block; margin: 20px auto; margin-left: 588px; font-size: 18px; padding: 10px 10px;">
+    Regresar al inicio
+</button>
+
+
+
+    <script>
+        // JavaScript para mostrar/ocultar detalles al hacer clic en el título
+        const requisitoTitulos = document.querySelectorAll('.requisito-titulo');
+        const listaRequisitos = document.getElementById('lista-requisitos');
+
+        // Función para mostrar los detalles con animación
+        function mostrarDetallesConAnimacion() {
+            const detalles = this.nextElementSibling; // El div de detalles siguiente al título
+            const isVisible = detalles.style.maxHeight !== '0px';
+
+            if (!isVisible) {
+                detalles.style.display = 'block';
+                listaRequisitos.style.opacity = '0'; // Ocultar la lista temporalmente
+                setTimeout(() => {
+                    detalles.style.maxHeight = '100px'; // Altura máxima deseada
+                    detalles.style.opacity = '1';
+                }, 0);
+            } else {
+                detalles.style.opacity = '0';
+                detalles.style.maxHeight = '0';
+                setTimeout(() => {
+                    detalles.style.display = 'none';
+                    listaRequisitos.style.opacity = '1'; // Restaurar la lista
+                }, 300);
+            }
+        }
+
+        requisitoTitulos.forEach((titulo) => {
+            titulo.addEventListener('click', mostrarDetallesConAnimacion);
+        });
+
+        // Mostrar los detalles al cargar la página con una animación
+        window.addEventListener('load', () => {
+            requisitoTitulos.forEach((titulo) => {
+                const detalles = titulo.nextElementSibling;
+                detalles.style.display = 'block'; // Mostrar los detalles
+                detalles.style.maxHeight = '0'; // Establecer la altura inicial
+                setTimeout(() => {
+                    detalles.style.maxHeight = '100px'; // Altura máxima deseada
+                }, 0);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de Sesión o Registro</title>
+    <style>
+        .container {
+            max-width: 500px; /* Aumentamos el ancho */
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3); /* Sombras */
+        }
+
+        .form-container {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .form-container input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido</h2>
+        <p>¿Qué te gustaría hacer?</p>
+        
+        <!-- Opción para Iniciar Sesión -->
+        <div class="form-container">
+            <h3>Iniciar Sesión</h3>
+            <form action="login.php" method="post">
+                <label for="email">Nombre:</label>
+                <input type="email" name="email" required><br>
+                <br>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" required><br>
+                <br>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+        </div>
+        <br>
+        <br>
+
+        <!-- Opción para Registrarse -->
+        <div class="form-container">
+            <h3>Registrarse</h3>
+            <form action="registro.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" required><br>
+                <br>
+                <label for="password_registro">Contraseña:</label>
+                <input type="password" name="password_registro" required><br>
+                <br>
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

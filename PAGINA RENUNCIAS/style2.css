@@ -1,0 +1,161 @@
+/* Estilos para el encabezado */
+.encabezado {
+    background-color: #995F07; /* Color de fondo */
+    color: #000000; /* Color de texto */
+    padding: 50px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+}
+
+.encabezado h1 {
+    font-size: 36px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Negrita */
+}
+
+.encabezado p {
+    font-size: 18px; /* Tamaño de fuente del subtítulo */
+}
+
+/* Efecto de sombra */
+.encabezado h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.encabezado {
+    font-size: 48px; /* Aumenta el tamaño del encabezado */
+   
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px; /* Agrega un borde redondo con un radio de 10px al encabezado */
+    display: inline-block; /* Asegura que el borde se aplique correctamente */
+    padding: 10px; /* Espacio alrededor del encabezado */
+    margin-left: 10px; /* Mueve el encabezado hacia la derecha */
+    width: 1300px; /* Cambia el ancho del encabezado a 300px */
+    height: 140px; /* Cambia la altura del encabezado a 80px */
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo del texto del encabezado */
+.texto_encabezado {
+    font-size: 36px;
+    color: #000000; /* Color del encabezado */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.texto-resaltado {
+    color: #000000; /* Color del texto que combina con el encabezado */
+    font-size: 28px; /* Cambia el tamaño de fuente a 28px */
+    font-family: "Arial", sans-serif; /* Cambia la fuente y asegúrate de proporcionar alternativas seguras */
+    font-weight: bold; /* Cambia el estilo de fuente a negrita */
+    padding: 5px; /* Espacio adicional alrededor del texto */
+}
+
+
+
+ol {
+  list-style-type: none; /* Quita los números o viñetas predeterminados */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0; /* Añade espaciado vertical entre los requisitos */
+  padding: 10px; /* Añade espacio dentro de cada requisito */
+  background-color: #B3CDDE; /* Color de fondo */
+  color: #B3CDDE; /* Color del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+
+
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #D96A07;
+  color: #8EA5B4;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer; /* Cambia el cursor al pasar sobre un requisito */
+}
+
+.requisito-detalles {
+  display: none; /* Oculta los detalles inicialmente */
+}
+
+
+ul {
+    margin-left: -40px; /* Ajusta la cantidad de margen izquierdo según tus preferencias */
+}
+
+ul {
+    text-align: center; /*para centrar el texto de la lista*/
+}
+
+
+
+/* Estilos para los títulos de requisitos */
+.requisito-titulo {
+     font-size: 36px;
+    color: black;
+    font-family: 'arial black', sans-serif; /* Estilo de fuente para el contenido */
+}
+
+/* Estilos para el contenido de requisitos */
+.requisito-contenido {
+    font-size: 22px;
+    color: white;
+    font-family: 'sans-serif'; /* Estilo de fuente para el contenido */
+}
+
+/* Resto de tu CSS ... */
+
+
+#lista-requisitos {
+    max-width: 900px; /* Establece el ancho máximo deseado */
+}
+
+/* Mueve todos los elementos de la lista hacia la derecha */
+#lista-requisitos li {
+    position: relative; /* Establece la posición relativa */
+    left: 225px; /* Ajusta el valor según la cantidad de espacio deseada */
+}
+
+
+/* Deshabilitar la interacción de clic en todos los elementos de la lista */
+#lista-requisitos li {
+    pointer-events: none;
+}
+
+
+/* Cambio de color de fondo y sombra cuando el mouse pasa sobre el botón */
+#miBotonNuevo:hover {
+    background-color: #e74c3c; /* Nuevo color de fondo al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de levantamiento */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Nueva sombra */
+}
+
+
+
